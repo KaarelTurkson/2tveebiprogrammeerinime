@@ -9,7 +9,22 @@
 	//kontrollin kas keegi vajutas nuppu
 	if($_SERVER["REQUEST_METHOD"] == "POST") {
 		
-	echo "jah";
+	//echo "jah";
+	
+	// kas epost on tühi
+	if( empty($_POST["email"])) {
+		
+		//jah oli tühi
+		$email_error = "See väli on kohustuslik";
+	}
+	
+	// kas password on tühi
+	if( empty($_POST["Parool"])) {
+		
+		//jah oli tühi
+		$password_error = "See väli on kohustuslik";
+	}
+	
 	}
 ?>
 
@@ -24,8 +39,8 @@
 	<body>
 		<h2>Login</h2>
 		<form action="login.php" method="post">
-		<input name="email"type="email" placeholder="E-post"> <br><br>
-		<input name="password"type="password" placeholder="Parool"> <br><br>
+		<input name="email"type="email" placeholder="E-post"> <?php echo $email_error ?><br><br>
+		<input name="password"type="password" placeholder="Parool"> <?php echo $password_error ?><br><br>
 		<input type="Submit" placeholder="Logi sisse"> <br><br>
 		</form>
 		
