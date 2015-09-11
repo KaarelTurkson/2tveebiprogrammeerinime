@@ -19,7 +19,7 @@
 	
 	
 ?>
-
+<br>
 <?php
 	// nii mitu korda trüki välja sõna "palju", kui palju vanus on
 	
@@ -31,4 +31,11 @@
 	}
 	
 	echo "õnne" ;
+?>
+<br>
+<?php
+	//kuupäev kujul 11.09.2015
+	echo( date("l, j.m.Y h:i:s"))
+
+
 ?>
